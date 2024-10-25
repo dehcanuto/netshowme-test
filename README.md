@@ -90,6 +90,8 @@ expondo os seguintes endpoints:
 
 |  Method | Endpoint    | Description |
 | ------- | ----------- | ----------- |
+|   GET   | /site       | Retorna os dados do site. |
+|   GET   | /categories | Retorna as categorias dos vídeos. |
 |   GET   | /videos     | Retorna a lista de todos os vídeos. |
 |   GET   | /videos/:id | Retorna os detalhes de um vídeo específico. |
 |  PATCH  | /videos/:id | Ao passar um JSON com os valores ao serem alterados, faz a mudança diretamente no db.json. |
