@@ -87,14 +87,14 @@ $ npx json-server db.json
 O json-server iniciará o servidor na porta 3000 e ficará disponível através de http://localhost:3000/ 
 expondo os seguintes endpoints:
 
-GET /videos - Retorna a lista de todos os vídeos.
-GET /videos/:id - Retorna os detalhes de um vídeo específico.
+|  Method | Endpoint    | Description |
+|   GET   | /videos     | Retorna a lista de todos os vídeos.         |
+|   GET   | /videos/:id | Retorna os detalhes de um vídeo específico. |
+|  PATCH  | /videos/:id | Ao passar um JSON com os valores ao serem alterados, faz a mudança diretamente no db.json. |
 
 Use sempre as listagens com paginação:
 
 http://localhost:3000/videos?_page=1&_per_page=10
-
-PATCH /videos/:id - Ao passar um JSON com os valores ao serem alterados, faz a mudança diretamente no db.json.
 
 A lista completa de endpoints aparece no momento da execução do json-server.
 
