@@ -30,16 +30,24 @@ $ git clone git@github.com:dehcanuto/netshowme-test.git
 ### 2. Instale as dependências
 
 ```bash
-$ yarn install
+yarn install
 ```
 
 ### 3. Rodar projeto
 
+#### 3.1 Rode o json-server utilizando o db.json:
+
 ```bash
-$ yarn dev
+npx json-server db.json
 ```
 
-O projeto será apresentado através do link [http://localhost:3000](http://localhost:3000).
+#### 3.2 Rode o front:
+
+```bash
+yarn dev
+```
+
+O projeto será apresentado através do link [http://localhost:4000](http://localhost:4000).
 
 ## Telas
 
@@ -78,12 +86,6 @@ Adicione uma animação ao exibir a lista de vídeos na Home Screen.
 - Criar versão SSR das páginas.
 
 ## API
-
-Utilize o json-server e inicie utilizando a db.json:
-
-```bash
-$ npx json-server db.json
-```
 
 O json-server iniciará o servidor na porta 3000 e ficará disponível através de http://localhost:3000/ 
 expondo os seguintes endpoints:
