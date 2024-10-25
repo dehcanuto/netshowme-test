@@ -17,6 +17,7 @@ A aplicação deve permitir que os usuários naveguem entre as diferentes telas,
 *  [NodeJS](https://nodejs.org/en/docs/) - Ambiente de execução JavaScript
 *  [NextJS](https://nextjs.org/docs) - Framework web
 *  [Tailwind CSS](https://tailwindcss.com/docs) - Framework para estilização
+*  [json-server](https://github.com/typicode/json-server) - Framework para criação da api
 
 ## 🚀 Instalação
 
@@ -70,7 +71,7 @@ Adicione uma animação ao exibir a lista de vídeos na Home Screen.
 
 ## Requisitos Técnicos
 - Utilizar React.
-- Utilizar json-server para simular a API com os endpoints especificados (o db.json pode ser baixado aqui).
+- Utilizar json-server para simular a API com os endpoints especificados (o db.json pode ser [baixado aqui](https://drive.google.com/file/d/131Dgf_RTnF1idZQd-vb7-hQjWHIc9Vij/view?usp=drive_link)).
 - Utilizar HLS para reprodução dos vídeos. Sugestão: jwplayer, bitmovin ou qualquer biblioteca de sua escolha para reprodução de vídeos HLS.
 - Implementar skeletons usando biblioteca como react-content-loader ou similar.
 - Criar testes funcionais da aplicação.
