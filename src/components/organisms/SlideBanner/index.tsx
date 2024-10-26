@@ -1,21 +1,45 @@
 "use client"
 
+import { useState } from "react";
 import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from 'swiper/modules';
 import { MdOutlinePlayArrow } from "react-icons/md";
 
-import 'swiper/swiper-bundle.min.css'
-import 'swiper/swiper.min.css'
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 import { SlideBannerPropType } from "./type";
 
 const SlideBanner = ({ slides }: SlideBannerPropType) => {
+    const [nextSlideProgress, setNextSlideProgress] = useState<number>(0);
+    const onAutoplayTimeLeft = (_s: SwiperClass, _time: number, progress: number) => {
+        const result = 100 - (progress * 100);
+        setNextSlideProgress(result);
+    }
+
     return (
-        <div className="container mx-auto h-screen">
-            <Swiper className="mySwiper" pagination>
+        <div className="container mx-auto h-[500px]">
+            <Swiper
+                className="banner-home mySwiper"
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
+                modules={[Autoplay, Pagination]}
+                onAutoplayTimeLeft={onAutoplayTimeLeft}
+                style={{
+                    "--swiper-pagination-color": "#fff",
+                    "--swiper-pagination-bullet-inactive-color": "#1b1b1b",
+                    "--swiper-pagination-bullet-inactive-opacity": "1",
+                    "--swiper-pagination-bullet-size": "10px",
+                    "--swiper-pagination-bullet-horizontal-gap": "6px",
+                    "--swiper-pagination-bottom": "4.6rem",
+                }}
+                navigation
+            >
                 {slides.map((item, index) => (
                     <SwiperSlide key={index}>
-                        <div className="flex flex-col max-w-xl py-36 gap-4">
+                        <div className="flex flex-col max-w-lg py-36 gap-4">
                             <h4 className="text-white/70">{item.category}</h4>
                             <h2 className="text-3xl font-medium">{item.title}</h2>
                             <p className="text-white/70">{item.description}</p>
@@ -26,6 +50,11 @@ const SlideBanner = ({ slides }: SlideBannerPropType) => {
                         </div>
                     </SwiperSlide>
                 ))}
+                <div className="absolute left-0 bottom-16">
+                    <div className="overflow-hidden w-12 h-2.5 mb-4 text-xs flex rounded bg-gray-100">
+                        <div style={{ width: nextSlideProgress }} className="flex flex-col whitespace-nowrap justify-center bg-white/70 shadow-none" />
+                    </div>
+                </div>
             </Swiper>
         </div>
     );

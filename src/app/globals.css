@@ -29,3 +29,8 @@ h1, h2 {
 h3, h4 {
   font-family: var(--font-nunito-sans);
 }
+
+.banner-home .swiper-pagination {
+  left: 3.5rem!important;
+  text-align: left;
+}

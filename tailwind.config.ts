@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         gray: {
+          100: '#1b1b1b',
           600: '#727272'
         }
       },
