@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <SlideBanner slides={bannerItems} />
-      <VideoFlow />
+      <VideoFlow title="Continuar reprodução" endpoint="/videos" />
     </main>
   );
 }
