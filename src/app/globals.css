@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-inter: "Inter", serif;
+  --font-nunito-sans: "Nunito Sans", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +22,10 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
+  font-family: var(--font-inter);
+}
+
+h3, h4 {
   font-family: var(--font-nunito-sans);
 }
