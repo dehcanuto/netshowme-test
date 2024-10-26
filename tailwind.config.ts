@@ -9,8 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        gray: {
+          600: '#727272'
+        }
+      },
+      fontFamily: {
+        'nunito-sans': ["Nunito Sans", 'sans-serif'],
+        display: ["Nunito Sans", 'sans-serif'],
+        body: ["Inter", 'sans-serif'],
       },
     },
   },
