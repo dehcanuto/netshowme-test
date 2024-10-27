@@ -54,8 +54,18 @@ const VideoFlow = ({ title, params }: VideoFlowPropsType) => {
                 <Suspense fallback={<span>loading...</span>}>
                     <Swiper
                         onSwiper={setSwiperRef}
-                        slidesPerView={5.5}
-                        spaceBetween={20}
+                        breakpoints={{
+                            320: {
+                                slidesPerGroup: 1,
+                                slidesPerView: 1.5,
+                                spaceBetween: 20
+                            },
+                            640: {
+                                slidesPerGroup: 5,
+                                slidesPerView: 5.5,
+                                spaceBetween: 20
+                            }
+                        }}
                     >
                         {theSlides}
                     </Swiper>

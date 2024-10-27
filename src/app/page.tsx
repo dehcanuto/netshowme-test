@@ -21,7 +21,7 @@ export default function Home() {
       <SlideBanner slides={bannerItems} />
       <VideoFlow title="Continuar reprodução" params={{  }} />
       <VideoFlow title="Ao vivo" params={{  }} />
-      <VideoFlow title="Minha lista" params={{  }} />
+      <VideoFlow title="Minha lista" params={{ my_list: true }} />
       <Suspense fallback={<span>loading...</span>}>
         {categories}
       </Suspense>
