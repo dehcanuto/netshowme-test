@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import { VideoProps } from "@/types/video";
 
-const VideoCard = ({ thumbnail, title, category, live, keep_watching }: VideoProps) => {
+const VideoCard = ({ id, thumbnail, title, category, live, keep_watching }: VideoProps) => {
     return (
-        <div className="flex flex-col gap-3">
+        <Link href={{ pathname: `/v/${id}` }} className="flex flex-col gap-3">
             <div className="relative w-full h-[163px] object-cover bg-slate-800 overflow-hidden">
                 <Image
                     src={thumbnail}
@@ -33,7 +35,7 @@ const VideoCard = ({ thumbnail, title, category, live, keep_watching }: VideoPro
                     {title}
                 </h4>
             </div>
-        </div>
+        </Link>
     )
 }
 
