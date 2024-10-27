@@ -58,10 +58,12 @@ export default function VideoPage({ params }: { params: Promise<{ id: string }> 
                     <VideoSingleActions id={id} />
                 </div>
             </section>
-            <section className="container mx-auto py-12">
-                <h2 className="font-bold text-2xl mb-3">Resumo</h2>
-                {video?.description}
-            </section>
+            {video?.description && (
+                <section className="container mx-auto py-12">
+                    <h2 className="font-bold text-2xl mb-3">Resumo</h2>
+                    {video?.description}
+                </section>
+            )}
             <section className="py-12 bg-black">
                 <VideoFlow title="Conteúdos relacionados" params={{}} />
             </section>

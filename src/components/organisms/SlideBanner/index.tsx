@@ -19,7 +19,10 @@ const SlideBanner = ({ slides }: SlideBannerPropType) => {
         <div className="container mx-auto h-[500px]">
             <Swiper
                 className="banner-home"
+                effect="fade"
+                speed={1000}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
+                fadeEffect={{ crossFade: true }}
                 pagination={{ clickable: true }}
                 modules={[Autoplay, EffectFade, Pagination]}
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
@@ -31,7 +34,6 @@ const SlideBanner = ({ slides }: SlideBannerPropType) => {
                     "--swiper-pagination-bullet-horizontal-gap": "6px",
                     "--swiper-pagination-bottom": "4.6rem",
                 }}
-                effect="fade"
             >
                 {slides.map((item, index) => (
                     <SwiperSlide key={index}>
