@@ -3,12 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import { MdOutlinePlayArrow } from "react-icons/md";
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
 
 import { SlideBannerPropType } from "./type";
 
@@ -22,10 +18,10 @@ const SlideBanner = ({ slides }: SlideBannerPropType) => {
     return (
         <div className="container mx-auto h-[500px]">
             <Swiper
-                className="banner-home mySwiper"
+                className="banner-home"
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
                 pagination={{ clickable: true }}
-                modules={[Autoplay, Pagination]}
+                modules={[Autoplay, EffectFade, Pagination]}
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
                 style={{
                     "--swiper-pagination-color": "#fff",
@@ -35,7 +31,7 @@ const SlideBanner = ({ slides }: SlideBannerPropType) => {
                     "--swiper-pagination-bullet-horizontal-gap": "6px",
                     "--swiper-pagination-bottom": "4.6rem",
                 }}
-                navigation
+                effect="fade"
             >
                 {slides.map((item, index) => (
                     <SwiperSlide key={index}>

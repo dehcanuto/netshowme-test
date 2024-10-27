@@ -3,17 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
   --font-inter: "Inter", serif;
   --font-nunito-sans: "Nunito Sans", serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -22,11 +15,11 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-h1, h2 {
+h1, h2, h4 {
   font-family: var(--font-inter);
 }
 
-h3, h4 {
+h3 {
   font-family: var(--font-nunito-sans);
 }
 

@@ -11,7 +11,8 @@ const config: Config = {
       colors: {
         gray: {
           100: '#1b1b1b',
-          600: '#727272'
+          600: '#727272',
+          900: '#131313'
         }
       },
       fontFamily: {

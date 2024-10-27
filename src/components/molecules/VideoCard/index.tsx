@@ -4,7 +4,7 @@ import { VideoProps } from "@/types/video";
 const VideoCard = ({ thumbnail, title, category }: VideoProps) => {
     return (
         <div className="flex flex-col gap-3">
-            <div className="w-[290px] h-[163px] object-cover bg-slate-800 overflow-hidden">
+            <div className="w-full h-[163px] object-cover bg-slate-800 overflow-hidden">
                 <Image
                     src={thumbnail}
                     alt={title}
