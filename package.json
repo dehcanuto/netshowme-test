@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
+    "bitmovin-player": "^8.186.0",
+    "bitmovin-player-react": "^1.0.1",
+    "bitmovin-player-ui": "^3.74.0",
     "json-server": "^1.0.0-beta.3",
     "next": "15.0.1",
     "react": "19.0.0-rc-69d4b800-20241021",

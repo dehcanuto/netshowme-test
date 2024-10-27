@@ -792,6 +792,21 @@ binary-extensions@^2.0.0:
   resolved "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.3.0.tgz"
   integrity sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==
 
+bitmovin-player-react@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/bitmovin-player-react/-/bitmovin-player-react-1.0.1.tgz#69d69c07bd44c4e151d8c21df67741f473c4b2cc"
+  integrity sha512-mB7uLjEBEY93E1wdeWUp26KEupEAyu1oqY9d/UA5fzMWWehigjSns95PikeKlwvxUPICXF34ZWcb8CulY+iuNA==
+
+bitmovin-player-ui@^3.74.0:
+  version "3.74.0"
+  resolved "https://registry.yarnpkg.com/bitmovin-player-ui/-/bitmovin-player-ui-3.74.0.tgz#1569b0e9512c997fc7119a8be48b713b5abe18e6"
+  integrity sha512-1Pk/2nuneBGId9o38wUllkaG2e7sen/JDeII+lwjpDn0IaPHsREGBYCK9X1mfTfwlUOX8THol8ycBz0v/yGh9Q==
+
+bitmovin-player@^8.186.0:
+  version "8.186.0"
+  resolved "https://registry.yarnpkg.com/bitmovin-player/-/bitmovin-player-8.186.0.tgz#e4049928af135ba9deddf10ab672696f91714692"
+  integrity sha512-hU713kDxMywU+kxbADSVWU9wM94mHn2vN+CA8VUAUjvzody7D9VkJydjDEQnQKnm5U24Uq9vdooR6jnZbnyV0g==
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz"

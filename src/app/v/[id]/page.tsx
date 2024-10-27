@@ -5,11 +5,11 @@ import { useEffect, useState  } from "react";
 import { MdOutlineBookmarkAdd } from "react-icons/md";
 
 import { VideoFlow, VideoSingleActions } from "@/components/organisms";
+import { JWTVideoPlayer } from "@/components/organisms/JWTVideoPlayer";
 
 import api from "@/services/api";
 import { VideoProps } from "@/types/video";
 import { formatDate } from "@/misc/format";
-
 
 export default function VideoPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = React.use(params);
@@ -29,8 +29,12 @@ export default function VideoPage({ params }: { params: Promise<{ id: string }> 
 
     return (
         <main className="bg-[#131313]">
-            <div className="bg-black h-[600px] mt-[72px]">
-
+            <div className="bg-black h-[520px] mt-[72px]">
+                <div className="container mx-auto">
+                    {video?.hls_path && (
+                        <JWTVideoPlayer hls_path={video?.hls_path} />
+                    )}
+                </div>
             </div>
             <section className="container py-8 mx-auto">
                 <h1 className="text-2xl font-semibold">
