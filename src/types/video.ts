@@ -1,5 +1,5 @@
 export interface VideoProps {
-    category: number;
+    category: number | string;
     created_at: string;
     description: string;
     hls_path: string;

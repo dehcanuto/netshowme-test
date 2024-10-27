@@ -19,7 +19,7 @@ const VideoFlow = ({ title, params }: VideoFlowPropsType) => {
             .then(res => res.data.data)
             .then(respose => respose.map((slide: VideoProps, key: Key) => 
                 <SwiperSlide key={key}>
-                    <VideoCard {...slide} />
+                    <VideoCard {...slide} category={title} />
                 </SwiperSlide>)
             )
             .catch((error) => <p className="text-white">Erro no fetch { error.message }</p>), [params])
