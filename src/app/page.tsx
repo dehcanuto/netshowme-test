@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-16">
       <SlideBanner slides={bannerItems} />
-      <VideoFlow title="Continuar reprodução" params={{  }} />
+      <VideoFlow title="Continuar reprodução" params={{ keep_watching: true }} />
       <VideoFlow title="Ao vivo" params={{ live: true }} />
       <VideoFlow title="Minha lista" params={{ my_list: true }} />
       <Suspense fallback={<span>loading...</span>}>

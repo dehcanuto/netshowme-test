@@ -11,4 +11,5 @@ export interface VideoProps {
     views: number;
     my_list: boolean;
     live: boolean;
+    keep_watching: boolean;
 }
