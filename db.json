@@ -35,7 +35,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "90561",
@@ -48,7 +49,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "89112",
@@ -61,7 +63,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "88338",
@@ -74,7 +77,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "88108",
@@ -87,7 +91,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "87941",
@@ -100,7 +105,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "87172",
@@ -113,7 +119,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "87172",
@@ -126,7 +133,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "83797",
@@ -139,7 +147,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "71886",
@@ -152,7 +161,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "46093",
@@ -165,7 +175,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "46095",
@@ -178,7 +189,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "46097",
@@ -191,7 +203,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "46098",
@@ -204,7 +217,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "46099",
@@ -217,7 +231,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "46100",
@@ -230,7 +245,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "46101",
@@ -243,7 +259,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "46102",
@@ -256,7 +273,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "46104",
@@ -269,7 +287,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "46106",
@@ -282,7 +301,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "37113",
@@ -295,7 +315,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": true
     },
     {
       "id": "34499",
@@ -308,7 +329,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "32839",
@@ -321,7 +343,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": true
     },
     {
       "id": "30833",
@@ -334,7 +357,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "28635",
@@ -347,7 +371,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": true
+      "my_list": true,
+      "live": false
     },
     {
       "id": "27420",
@@ -360,7 +385,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "24886",
@@ -373,7 +399,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "22281",
@@ -386,7 +413,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": true
+      "my_list": true,
+      "live": false
     },
     {
       "id": "20331",
@@ -399,7 +427,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": false
+      "my_list": false,
+      "live": false
     },
     {
       "id": "14320",
@@ -412,7 +441,8 @@
       "site_id": 70,
       "views": 0,
       "likes": 0,
-      "my_list": true
+      "my_list": true,
+      "live": false
     }
   ]
 }

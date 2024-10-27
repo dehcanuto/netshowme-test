@@ -10,4 +10,5 @@ export interface VideoProps {
     title: string;
     views: number;
     my_list: boolean;
+    live: boolean;
 }

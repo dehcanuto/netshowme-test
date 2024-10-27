@@ -20,7 +20,7 @@ export default function Home() {
     <main className="flex flex-col gap-16">
       <SlideBanner slides={bannerItems} />
       <VideoFlow title="Continuar reprodução" params={{  }} />
-      <VideoFlow title="Ao vivo" params={{  }} />
+      <VideoFlow title="Ao vivo" params={{ live: true }} />
       <VideoFlow title="Minha lista" params={{ my_list: true }} />
       <Suspense fallback={<span>loading...</span>}>
         {categories}
