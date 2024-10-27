@@ -9,4 +9,5 @@ export interface VideoProps {
     thumbnail: string;
     title: string;
     views: number;
+    my_list: boolean;
 }

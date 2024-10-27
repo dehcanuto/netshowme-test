@@ -13,15 +13,18 @@ import { VideoFlowPropsType } from "./type";
 
 const VideoFlow = ({ title, params }: VideoFlowPropsType) => {
     const [swiperRef, setSwiperRef] = useState<SwiperClass>();
+    const [slidesLength, setSlidesLength] = useState<number>(0);
     
     const theSlides = useMemo(async () => 
         await api.get('/videos', { params: {...params, _page: 1, _per_page: 10 } })
             .then(res => res.data.data)
-            .then(respose => respose.map((slide: VideoProps, key: Key) => 
+            .then(respose => {
+                setSlidesLength(respose.length);
+                return respose.map((slide: VideoProps, key: Key) => 
                 <SwiperSlide key={key}>
                     <VideoCard {...slide} category={title} />
                 </SwiperSlide>)
-            )
+            })
             .catch((error) => <p className="text-white">Erro no fetch { error.message }</p>), [params])
 
     const handlePrevious = useCallback(() => {
@@ -38,22 +41,25 @@ const VideoFlow = ({ title, params }: VideoFlowPropsType) => {
                 <h3 className="font-bold text-2xl">
                     {title}
                 </h3>
-                <div className="flex font-bold gap-6">
-                    <span>Veja mais</span>
-                    <div className="flex gap-6">
-                        <button type="button" onClick={handlePrevious}>
-                            <FaChevronLeft />
-                        </button>
-                        <button type="button" onClick={handleNext}>
-                            <FaChevronRight />
-                        </button>
+                {slidesLength > 5 && (
+                    <div className="flex font-bold gap-6">
+                        <span>Veja mais</span>
+                        <div className="flex gap-6">
+                            <button type="button" onClick={handlePrevious}>
+                                <FaChevronLeft />
+                            </button>
+                            <button type="button" onClick={handleNext}>
+                                <FaChevronRight />
+                            </button>
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
             <div className="flex flex-row gap-3">
                 <Suspense fallback={<span>loading...</span>}>
                     <Swiper
                         onSwiper={setSwiperRef}
+                        style={{ width: '100%', height: '100%' }}
                         breakpoints={{
                             320: {
                                 slidesPerGroup: 1,
