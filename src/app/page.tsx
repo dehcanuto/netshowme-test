@@ -12,7 +12,7 @@ export default function Home() {
     await api.get('/categories')
       .then(res => res.data)
       .then(respose => respose.map((category: CategoryType, index: Key) => (
-        <VideoFlow key={index} title={category.title} params={{ category: category.id }} />
+        <VideoFlow key={index} title={category.title} params={{ category: category.id, live: false }} />
       )))
       .catch((error) => <p className="text-white">Erro no fetch { error.message }</p>), [])
 
