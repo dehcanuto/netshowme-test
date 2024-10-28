@@ -55,7 +55,7 @@ const VideoFlow = ({ title, params }: VideoFlowPropsType) => {
             .finally(() => setLoadingFLow(false));
         }
         init();
-    }, [])
+    }, [params])
 
     return (
         <section className="container mx-auto">

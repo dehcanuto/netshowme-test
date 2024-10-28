@@ -45,19 +45,15 @@ export default function VideoPage({ params }: { params: Promise<{ id: string }> 
                     );
                 })
         }
-        
         getVideo();
-        console.log('video', video);
-    }, [])
+    }, [id])
 
     return (
         video && (
             <main className="bg-[#131313]">
                 <div className="bg-black lg:h-[520px] mt-[72px]">
                     <div className="container mx-auto">
-                        {video.hls_path && (
-                            <JWTVideoPlayer hls_path={video?.hls_path} />
-                        )}
+                        <JWTVideoPlayer hls_path={video.hls_path} />
                     </div>
                 </div>
                 <section className="container py-8 px-4 mx-auto">
@@ -69,11 +65,9 @@ export default function VideoPage({ params }: { params: Promise<{ id: string }> 
                             <span className="py-1 px-2 bg-[#1e1e1e] text-xs rounded-full">
                                 {getCategory(video.category)}
                             </span>
-                            {video?.created_at && (
-                                <time dateTime={video.created_at} className="text-xs">
-                                    {formatDate(video.created_at)}
-                                </time>
-                            )}
+                            <time dateTime={video.created_at} className="text-xs">
+                                {formatDate(video.created_at)}
+                            </time>
                             <BaseButton click={() => handleAddList(!myList)} filled={myList}>
                                 <MdOutlineBookmarkAdd className="text-2xl" />
                                 Adicionar à minha lista 
