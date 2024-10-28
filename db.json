@@ -49,7 +49,7 @@
       "thumbnail": "https://static-ott.netshow.me/sites/70/media/268998/Over-The-Cast---20.png",
       "site_id": 70,
       "views": 0,
-      "likes": 0,
+      "likes": -1,
       "my_list": false,
       "live": false,
       "keep_watching": false
@@ -64,7 +64,7 @@
       "thumbnail": "https://static-ott.netshow.me/sites/70/media/264259/Over-The-Cast---19.png",
       "site_id": 70,
       "views": 0,
-      "likes": 0,
+      "likes": 1,
       "my_list": false,
       "live": false,
       "keep_watching": false
@@ -274,8 +274,8 @@
       "thumbnail": "https://static-ott.netshow.me/sites/70/media/237353/Flow-Experience---16.png",
       "site_id": 70,
       "views": 0,
-      "likes": 0,
-      "my_list": false,
+      "likes": 1,
+      "my_list": true,
       "live": false,
       "keep_watching": true
     },
@@ -439,7 +439,7 @@
       "thumbnail": "https://static-ott.netshow.me/sites/70/media/237335/Netshow.me-Talks---12.png",
       "site_id": 70,
       "views": 0,
-      "likes": 0,
+      "likes": -1,
       "my_list": true,
       "live": false,
       "keep_watching": true

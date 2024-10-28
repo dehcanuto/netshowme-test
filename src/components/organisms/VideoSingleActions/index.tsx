@@ -1,36 +1,45 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { BiSolidDislike, BiSolidLike, BiSolidShareAlt } from "react-icons/bi";
 
-const VideoSingleActions = ({ id }: { id: string }) => {
+import { BaseButton } from "@/components/atoms";
 
-    const handleLikeVideo = useCallback(() => {
-        console.log('id', id)
-    }, [id]);
+import api from "@/services/api";
+import { VideoSingleActionsPropType } from "./type";
 
-    const handleDislikeVideo = useCallback(() => {
-        console.log('id', id)
+const VideoSingleActions = ({ id, likes }: VideoSingleActionsPropType) => {
+    const [liked, setLiked] = useState<boolean>(likes == 1);
+    const [unliked, setUnliked] = useState<boolean>(likes < 0);
+
+    const handleLikeVideo = useCallback(async (likeNumber: number) => {
+        await api.patch(`/videos/${id}`, { likes: likeNumber })
+                .then(res => res.data)
+                .then((res) => {
+                    setLiked(res.likes == 1);
+                    setUnliked(res.likes < 0)
+                })
+                .catch((error) => <p className="text-white">Erro no fetch { error.message }</p>)
     }, [id]);
 
     const handleShareVideo = () => {
-        console.log('handleShareVideo');
+        navigator.clipboard.writeText(`http://localhost:4000/v/${id}`);
     }
 
     return (
-        <div className="flex items-center gap-6">
-            <button type="button" onClick={handleLikeVideo} className="flex items-center font-bold gap-2">
+        <div className="flex items-center gap-3">
+            <BaseButton click={() => handleLikeVideo(1)} filled={liked}>
                 <BiSolidLike />
                 Gostei
-            </button>
-            <button type="button" onClick={handleDislikeVideo} className="flex items-center font-bold gap-2">
+            </BaseButton>
+            <BaseButton click={() => handleLikeVideo(-1)} filled={unliked}>
                 <BiSolidDislike />
                 Não é pra mim
-            </button>
-            <button type="button" onClick={handleShareVideo} className="flex items-center font-bold gap-2">
+            </BaseButton>
+            <BaseButton click={handleShareVideo}>
                 <BiSolidShareAlt />
                 Compartilhar
-            </button>
+            </BaseButton>
         </div>
     )
 }
