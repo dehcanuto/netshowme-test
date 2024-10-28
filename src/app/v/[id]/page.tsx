@@ -11,6 +11,7 @@ import api from "@/services/api";
 import { VideoProps } from "@/types/video";
 import { formatDate } from "@/misc/format";
 import { BaseButton } from "@/components/atoms";
+import { getCategory } from "@/hooks/getCategory";
 
 export default function VideoPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = React.use(params);
@@ -56,7 +57,7 @@ export default function VideoPage({ params }: { params: Promise<{ id: string }> 
                     <div className="flex flex-col lg:flex-row items-center justify-between mt-3">
                         <div className="flex items-center justify-center gap-4">
                             <span className="py-1 px-2 bg-[#1e1e1e] text-xs rounded-full">
-                                Over the Cast
+                                {getCategory(video.category)}
                             </span>
                             {video?.created_at && (
                                 <time dateTime={video.created_at} className="text-xs">

@@ -7,8 +7,10 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import api from "@/services/api";
 
+import { getCategory } from "@/hooks/getCategory";
 import { VideoCard } from "@/components/molecules";
 import { VideoProps } from "@/types/video";
+
 import { VideoFlowPropsType } from "./type";
 import VideoFlowSkeleton from "./skeleton";
 
@@ -21,10 +23,14 @@ const VideoFlow = ({ title, params }: VideoFlowPropsType) => {
             .then(res => res.data.data)
             .then(respose => {
                 setSlidesLength(respose.length);
-                return respose.map((slide: VideoProps, key: Key) => 
-                <SwiperSlide key={key}>
-                    <VideoCard {...slide} category={title} />
-                </SwiperSlide>)
+                return respose.map(async (slide: VideoProps, key: Key) => {
+                    const categoryName = await getCategory(slide.category);
+                    return (
+                        <SwiperSlide key={key}>
+                            <VideoCard {...slide} category={categoryName} />
+                        </SwiperSlide>
+                    )
+                })
             })
             .catch((error) => <p className="text-white">Erro no fetch { error.message }</p>), [params])
 

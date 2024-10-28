@@ -3,18 +3,16 @@ import { useMemo, Suspense, Key } from "react";
 import { SlideBanner, VideoFlow } from "@/components/organisms";
 import bannerItems from "@/misc/bannerItems";
 
-import api from "@/services/api";
+import { getAllCategories } from "@/hooks/getCategory";
 import { CategoryType } from "@/types/category";
 
 export default function Home() {
-  
-  const categories = useMemo(async () => 
-    await api.get('/categories')
-      .then(res => res.data)
-      .then(respose => respose.map((category: CategoryType, index: Key) => (
-        <VideoFlow key={index} title={category.title} params={{ category: category.id, live: false }} />
-      )))
-      .catch((error) => <p className="text-white">Erro no fetch { error.message }</p>), [])
+  const categories = useMemo(async () => {
+    const response = await getAllCategories();
+    return response.map((category: CategoryType, index: Key) => (
+      <VideoFlow key={index} title={category.title} params={{ category: category.id, live: false }} />
+    ))
+  }, []);
 
   return (
     <main className="flex flex-col gap-16 p-4">
