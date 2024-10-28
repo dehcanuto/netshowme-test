@@ -6,6 +6,8 @@ import bannerItems from "@/misc/bannerItems";
 import { getAllCategories } from "@/hooks/getCategory";
 import { CategoryType } from "@/types/category";
 
+import VideoFlowSkeleton from "@/components/organisms/VideoFlow/skeleton";
+
 export default function Home() {
   const categories = useMemo(async () => {
     const response = await getAllCategories();
@@ -17,10 +19,16 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-16 p-4">
       <SlideBanner slides={bannerItems} />
-      <VideoFlow title="Continuar reprodução" params={{ keep_watching: true }} />
-      <VideoFlow title="Ao vivo" params={{ live: true }} />
-      <VideoFlow title="Minha lista" params={{ my_list: true }} />
-      <Suspense fallback={<span>loading...</span>}>
+      <Suspense fallback={<VideoFlowSkeleton />}>
+        <VideoFlow title="Continuar reprodução" params={{ keep_watching: true }} />
+      </Suspense>
+      <Suspense fallback={<VideoFlowSkeleton />}>
+        <VideoFlow title="Ao vivo" params={{ live: true }} />
+      </Suspense>
+      <Suspense fallback={<VideoFlowSkeleton />}>
+        <VideoFlow title="Minha lista" params={{ my_list: true }} />
+      </Suspense>
+      <Suspense fallback={<VideoFlowSkeleton />}>
         {categories}
       </Suspense>
     </main>
