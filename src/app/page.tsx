@@ -17,7 +17,7 @@ export default function Home() {
       .catch((error) => <p className="text-white">Erro no fetch { error.message }</p>), [])
 
   return (
-    <main className="flex flex-col gap-16">
+    <main className="flex flex-col gap-16 p-4">
       <SlideBanner slides={bannerItems} />
       <VideoFlow title="Continuar reprodução" params={{ keep_watching: true }} />
       <VideoFlow title="Ao vivo" params={{ live: true }} />

@@ -41,19 +41,18 @@ export default function RootLayout({
         {children}
         <footer className="py-4 border-t border-[#292929] mt-12">
           <div className="container mx-auto">
-            <div className="flex items-center justify-between text-xs">
-              <div className="flex items-center gap-6">
+            <div className="flex items-center justify-center lg:justify-between text-xs">
+              <div className="flex flex-col lg:flex-row items-center gap-6">
                 <span className="text-sm">© Flow 2023</span>
                 <a href="#">Política de Privacidade</a>
                 <a href="#">Termos de Uso</a>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="hidden lg:flex items-center gap-3">
                 <p>Desenvolvido por <strong>Netshow.me</strong></p>
                 <span className="px-2 bg-[#EE3965] text-white font-semibold uppercase rounded-sm">Beta</span>
               </div>
             </div>
           </div>
-
         </footer>
       </body>
     </html>

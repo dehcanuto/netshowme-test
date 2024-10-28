@@ -16,7 +16,7 @@ const SlideBanner = ({ slides }: SlideBannerPropType) => {
     }
 
     return (
-        <div className="container mx-auto h-[500px]">
+        <div className="container mx-auto h-[628px] lg:h-[500px] pt-28 lg:pt-0">
             <Swiper
                 className="banner-home"
                 effect="fade"
@@ -41,7 +41,7 @@ const SlideBanner = ({ slides }: SlideBannerPropType) => {
                             <h4 className="text-white/70">{item.category}</h4>
                             <h2 className="text-3xl font-medium">{item.title}</h2>
                             <p className="text-white/70">{item.description}</p>
-                            <Link href={{ pathname: item.path }} className="flex w-fit p-2 px-6 mt-3 gap-2 bg-white text-black font-bold rounded">
+                            <Link href={{ pathname: item.path }} className="flex items-center justify-center w-full lg:w-fit p-2 px-6 mt-3 gap-2 bg-white text-black font-bold rounded">
                                 <MdOutlinePlayArrow className="text-2xl" />
                                 Reproduzir agora
                             </Link>

@@ -3,7 +3,7 @@ import VideoFlowSkeleton from "@/components/organisms/VideoFlow/skeleton";
 export default function Loading() {
     return (
         <main className="bg-[#131313]">
-            <div className="bg-black h-[520px] mt-[72px]">
+            <div className="bg-black h-[286px] lg:h-[520px] mt-[72px]">
                 <div className="container mx-auto">
                     <span className="flex animate-pulse bg-gray-300 w-[924px] h-[520px] mx-auto"></span>
                 </div>

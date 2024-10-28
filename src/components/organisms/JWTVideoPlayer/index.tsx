@@ -35,7 +35,7 @@ const uiVariantsFactory = (): UIVariant[] => [
 export const JWTVideoPlayer = ({ hls_path }: { hls_path: string }) => {
   return (
     <Fragment>
-      <div className="relative max-w-[924px] h-[520px] mx-auto">
+      <div className="relative max-w-[924px] h-[286px] lg:h-[520px] mx-auto">
         <BitmovinPlayer
           source={{ hls: hls_path }}
           config={playerConfig}

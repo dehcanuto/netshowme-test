@@ -42,18 +42,18 @@ export default function VideoPage({ params }: { params: Promise<{ id: string }> 
     return (
         video && (
             <main className="bg-[#131313]">
-                <div className="bg-black h-[520px] mt-[72px]">
+                <div className="bg-black lg:h-[520px] mt-[72px]">
                     <div className="container mx-auto">
                         {video.hls_path && (
                             <JWTVideoPlayer hls_path={video?.hls_path} />
                         )}
                     </div>
                 </div>
-                <section className="container py-8 mx-auto">
+                <section className="container py-8 px-4 mx-auto">
                     <h1 className="text-2xl font-semibold">
                         {video.title}
                     </h1>
-                    <div className="flex items-center justify-between mt-3">
+                    <div className="flex flex-col lg:flex-row items-center justify-between mt-3">
                         <div className="flex items-center justify-center gap-4">
                             <span className="py-1 px-2 bg-[#1e1e1e] text-xs rounded-full">
                                 Over the Cast
@@ -72,12 +72,12 @@ export default function VideoPage({ params }: { params: Promise<{ id: string }> 
                     </div>
                 </section>
                 {video?.description && (
-                    <section className="container mx-auto py-12">
+                    <section className="container mx-auto px-4 py-12">
                         <h2 className="font-bold text-2xl mb-3">Resumo</h2>
                         {video.description}
                     </section>
                 )}
-                <section className="py-12 bg-black">
+                <section className="py-12 px-4 bg-black">
                     <VideoFlow title="Conteúdos relacionados" params={{}} />
                 </section>
             </main>

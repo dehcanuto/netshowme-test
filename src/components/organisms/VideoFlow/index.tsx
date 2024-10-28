@@ -44,8 +44,8 @@ const VideoFlow = ({ title, params }: VideoFlowPropsType) => {
                 </h3>
                 {slidesLength > 5 && (
                     <div className="flex font-bold gap-6">
-                        <span>Veja mais</span>
-                        <div className="flex gap-6">
+                        <span className="text-[#EE3965] lg:text-white">Veja mais</span>
+                        <div className="hidden lg:flex gap-6">
                             <button type="button" onClick={handlePrevious}>
                                 <FaChevronLeft />
                             </button>
