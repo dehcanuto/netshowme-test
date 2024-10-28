@@ -10,6 +10,7 @@ import api from "@/services/api";
 import { VideoCard } from "@/components/molecules";
 import { VideoProps } from "@/types/video";
 import { VideoFlowPropsType } from "./type";
+import VideoFlowSkeleton from "./skeleton";
 
 const VideoFlow = ({ title, params }: VideoFlowPropsType) => {
     const [swiperRef, setSwiperRef] = useState<SwiperClass>();
@@ -56,7 +57,7 @@ const VideoFlow = ({ title, params }: VideoFlowPropsType) => {
                 )}
             </div>
             <div className="flex flex-row gap-3">
-                <Suspense fallback={<span>loading...</span>}>
+                <Suspense fallback={<VideoFlowSkeleton />}>
                     <Swiper
                         onSwiper={setSwiperRef}
                         style={{ width: '100%', height: '100%' }}
