@@ -19,7 +19,12 @@ const VideoSingleActions = ({ id, likes }: VideoSingleActionsPropType) => {
                     setLiked(res.likes == 1);
                     setUnliked(res.likes < 0)
                 })
-                .catch((error) => <p className="text-white">Erro no fetch { error.message }</p>)
+                .catch((error) => {
+                    return new Response(
+                      'There has been a problem with your fetch operation handleLikeVideo: ' + error.message,
+                      { status: 500 }
+                    );
+                })
     }, [id]);
 
     const handleShareVideo = () => {

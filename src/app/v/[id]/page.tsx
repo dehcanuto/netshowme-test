@@ -22,7 +22,12 @@ export default function VideoPage({ params }: { params: Promise<{ id: string }> 
         await api.patch(`/videos/${id}`, { my_list: added })
                 .then(res => res.data)
                 .then(() => setMyList(added))
-                .catch((error) => <p className="text-white">Erro no fetch { error.message }</p>)
+                .catch((error) => {
+                    return new Response(
+                      'There has been a problem with your fetch operation handleAddList: ' + error.message,
+                      { status: 500 }
+                    );
+                })
     }, [id]);
 
     useEffect(() => {
@@ -33,7 +38,12 @@ export default function VideoPage({ params }: { params: Promise<{ id: string }> 
                     setVideo(respose);
                     setMyList(respose.my_list);
                 })
-                .catch((error) => <p className="text-white">Erro no fetch { error.message }</p>)
+                .catch((error) => {
+                    return new Response(
+                      'There has been a problem with your fetch operation getVideo: ' + error.message,
+                      { status: 500 }
+                    );
+                })
         }
         
         getVideo();

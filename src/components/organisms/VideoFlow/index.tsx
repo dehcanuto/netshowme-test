@@ -32,7 +32,12 @@ const VideoFlow = ({ title, params }: VideoFlowPropsType) => {
                     )
                 })
             })
-            .catch((error) => <p className="text-white">Erro no fetch { error.message }</p>), [params])
+            .catch((error) => {
+                return new Response(
+                  'There has been a problem with your fetch operation VideoFlow: ' + error.message,
+                  { status: 500 }
+                );
+            }), [params])
 
     const handlePrevious = useCallback(() => {
         swiperRef?.slidePrev();

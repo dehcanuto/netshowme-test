@@ -5,6 +5,7 @@ const api = axios.create({
 });
 
 api.interceptors.request.use(
+  (response) => response,
   (error) => {
     Promise.reject(error)
     return error;
