@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { CSSProperties, useState } from "react";
 import Link from "next/link";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
@@ -33,7 +33,7 @@ const SlideBanner = ({ slides }: SlideBannerPropType) => {
                     "--swiper-pagination-bullet-size": "10px",
                     "--swiper-pagination-bullet-horizontal-gap": "6px",
                     "--swiper-pagination-bottom": "4.6rem",
-                }}
+                } as CSSProperties}
             >
                 {slides.map((item, index) => (
                     <SwiperSlide key={index}>
